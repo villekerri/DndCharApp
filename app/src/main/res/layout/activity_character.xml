@@ -1,0 +1,1829 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/desert_sand"
+        tools:context=".CharacterActivity">
+
+        <TextView
+            android:id="@+id/tvCharName"
+            style="@style/character_basic_info"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tvCharName"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btNavNotes"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvCharClass"
+            style="@style/character_basic_info"
+            android:layout_width="144dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tvCharClass"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCharName"
+            app:layout_constraintTop_toBottomOf="@+id/btNavNotes" />
+
+        <TextView
+            android:id="@+id/tvCharAlig"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tvCharAlig"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCharRace"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharClass" />
+
+        <TextView
+            android:id="@+id/tvCharRace"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tvCharRace"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharName" />
+
+        <TextView
+            android:id="@+id/tvCharLvl"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical"
+            android:paddingStart="35dp"
+            android:paddingLeft="35dp"
+            android:paddingEnd="35dp"
+            android:text="@string/tvCharLvl"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharProficiency" />
+
+        <EditText
+            android:id="@+id/tvCharLvlScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="91dp"
+            android:layout_marginLeft="91dp"
+            android:text="@string/tvCharLvlScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharLvl"
+            app:layout_constraintStart_toStartOf="@+id/tvCharLvl"
+            app:layout_constraintTop_toTopOf="@+id/tvCharLvl" />
+
+        <TextView
+            android:id="@+id/tvCharXp"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:paddingStart="35dp"
+            android:paddingLeft="35dp"
+            android:paddingEnd="35dp"
+            android:text="@string/tvCharXp"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCharLvl"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharHitDice" />
+
+        <EditText
+            android:id="@+id/tvCharXpScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:text="@string/tvCharXpScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharXp"
+            app:layout_constraintStart_toStartOf="@+id/tvCharXp"
+            app:layout_constraintTop_toTopOf="@+id/tvCharXp" />
+
+        <TextView
+            android:id="@+id/tvCharBackground"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/tvCharBackground"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharRace" />
+
+        <TextView
+            android:id="@+id/tvCharSpeed"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:paddingStart="35dp"
+            android:paddingLeft="35dp"
+            android:paddingEnd="35dp"
+            android:text="@string/tvCharSpeed"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCharBackground"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharAlig" />
+
+        <TextView
+            android:id="@+id/tvCharSpeedScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
+            android:text="@string/tvCharSpeedScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharSpeed"
+            app:layout_constraintStart_toStartOf="@+id/tvCharSpeed"
+            app:layout_constraintTop_toTopOf="@+id/tvCharSpeed" />
+
+        <TextView
+            android:id="@+id/tvCharProficiency"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharProficiency"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharBackground" />
+
+        <TextView
+            android:id="@+id/tvCharProficiencyScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="123dp"
+            android:layout_marginLeft="123dp"
+            android:text="@string/tvCharProficiencyScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvCharProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharProficiency" />
+
+        <TextView
+            android:id="@+id/tvCharHitDice"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingEnd="20dp"
+            android:text="@string/tvCharHitDice"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCharProficiency"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharSpeed" />
+
+        <TextView
+            android:id="@+id/tvCharHitDiceScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="98dp"
+            android:layout_marginLeft="98dp"
+            android:text="@string/tvCharHitDiceScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharHitDice"
+            app:layout_constraintStart_toStartOf="@+id/tvCharHitDice"
+            app:layout_constraintTop_toTopOf="@+id/tvCharHitDice" />
+
+        <TextView
+            android:id="@+id/tvCharHp"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingStart="35dp"
+            android:paddingLeft="35dp"
+            android:paddingEnd="35dp"
+            android:text="@string/tvCharHp"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharLvl" />
+
+        <EditText
+            android:id="@+id/tvCharHpScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="69dp"
+            android:text="@string/tvCharHpScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharHp"
+            app:layout_constraintStart_toStartOf="@+id/tvCharHp"
+            app:layout_constraintTop_toTopOf="@+id/tvCharHp" />
+
+        <TextView
+            android:id="@+id/tvCharAc"
+            style="@style/character_basic_info"
+            android:layout_width="182dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:paddingStart="35dp"
+            android:paddingLeft="35dp"
+            android:paddingEnd="35dp"
+            android:text="@string/tvCharAc"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCharHp"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharXp" />
+
+        <EditText
+            android:id="@+id/tvCharAcScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="69dp"
+            android:text="@string/tvCharAcScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAc"
+            app:layout_constraintStart_toStartOf="@+id/tvCharAc"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAc" />
+
+        <View
+            android:id="@+id/lineOne"
+            android:layout_width="385dp"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toTopOf="@+id/tvCharLvl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharProficiency" />
+
+        <Button
+            android:id="@+id/btChangeSome"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:onClick="buttonClick"
+            android:text="@string/btChangeSome"
+            app:backgroundTint="#3F51B5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharHp" />
+
+        <View
+            android:id="@+id/lineTwo"
+            android:layout_width="385dp"
+            android:layout_height="2dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btChangeSome" />
+
+        <TextView
+            android:id="@+id/tvAbilityList"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="228dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingStart="25dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="25dp"
+            android:text="@string/tvAbilityList"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineTwo" />
+
+        <TextView
+            android:id="@+id/tvCharStrength"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharStrength"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityList"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityList"
+            app:layout_constraintTop_toTopOf="@+id/tvAbilityList" />
+
+        <TextView
+            android:id="@+id/tvAbilityScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="137dp"
+            android:layout_marginLeft="137dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/tvAbilityScore"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityList"
+            app:layout_constraintTop_toTopOf="@+id/tvAbilityList" />
+
+        <TextView
+            android:id="@+id/tvAbilityModifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/tvAbilityModifier"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvAbilityScore"
+            app:layout_constraintTop_toTopOf="@+id/tvAbilityList" />
+
+        <TextView
+            android:id="@+id/tvAbilityST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/tvAbilityST"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAbilityModifier"
+            app:layout_constraintStart_toEndOf="@+id/tvAbilityModifier"
+            app:layout_constraintTop_toTopOf="@+id/tvAbilityModifier" />
+
+        <TextView
+            android:id="@+id/tvCharStrengthScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharStrengthScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharStrength"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityScore"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharStrength" />
+
+        <TextView
+            android:id="@+id/tvCharStrengthModifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharStrengthModifier"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharStrength"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityModifier"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityModifier"
+            app:layout_constraintTop_toTopOf="@+id/tvCharStrength" />
+
+        <TextView
+            android:id="@+id/tvCharStrengthST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharStrengthST"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharStrength"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityST"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityST"
+            app:layout_constraintTop_toTopOf="@+id/tvCharStrength" />
+
+        <TextView
+            android:id="@+id/tvCharDexterity"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharDexterity"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharStrength" />
+
+        <TextView
+            android:id="@+id/tvCharDexterityScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharDexterityScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharDexterity"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityScore"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharDexterity" />
+
+        <TextView
+            android:id="@+id/tvCharDexterityModifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharDexterityModifier"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharDexterity"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityModifier"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityModifier"
+            app:layout_constraintTop_toTopOf="@+id/tvCharDexterity" />
+
+        <TextView
+            android:id="@+id/tvCharDexterityST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharDexterityST"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharDexterity"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityST"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityST"
+            app:layout_constraintTop_toTopOf="@+id/tvCharDexterity" />
+
+        <TextView
+            android:id="@+id/tvCharConstitution"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharConstitution"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharDexterity" />
+
+        <TextView
+            android:id="@+id/tvCharConstitutionScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharConstitutionScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharConstitution"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityScore"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharConstitution" />
+
+        <TextView
+            android:id="@+id/tvCharConstitutionModifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharConstitutionModifier"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharConstitution"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityModifier"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityModifier"
+            app:layout_constraintTop_toTopOf="@+id/tvCharConstitution" />
+
+        <TextView
+            android:id="@+id/tvCharConstitutionST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharConstitutionST"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharConstitution"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityST"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityST"
+            app:layout_constraintTop_toTopOf="@+id/tvCharConstitution" />
+
+        <TextView
+            android:id="@+id/tvCharIntelligence"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharIntelligence"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharConstitution" />
+
+        <TextView
+            android:id="@+id/tvCharIntelligenceScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharIntelligenceScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharIntelligence"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityScore"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharIntelligence" />
+
+        <TextView
+            android:id="@+id/tvCharIntelligenceModifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharIntelligenceModifier"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharIntelligence"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityModifier"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityModifier"
+            app:layout_constraintTop_toTopOf="@+id/tvCharIntelligence" />
+
+        <TextView
+            android:id="@+id/tvCharIntelligenceST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharIntelligenceST"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharIntelligence"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityST"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityST"
+            app:layout_constraintTop_toTopOf="@+id/tvCharIntelligence" />
+
+        <TextView
+            android:id="@+id/tvCharWisdom"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharWisdom"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharIntelligence" />
+
+        <TextView
+            android:id="@+id/tvCharWisdomScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharWisdomScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharWisdom"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityScore"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharWisdom" />
+
+        <TextView
+            android:id="@+id/tvCharWisdomModifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharWisdomModifier"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharWisdom"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityModifier"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityModifier"
+            app:layout_constraintTop_toTopOf="@+id/tvCharWisdom" />
+
+        <TextView
+            android:id="@+id/tvCharWisdomST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharWisdomST"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharWisdom"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityST"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityST"
+            app:layout_constraintTop_toTopOf="@+id/tvCharWisdom" />
+
+        <TextView
+            android:id="@+id/tvCharCharisma"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharCharisma"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharWisdom" />
+
+        <TextView
+            android:id="@+id/tvCharCharismaScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharCharismaScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharCharisma"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityScore"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharCharisma" />
+
+        <TextView
+            android:id="@+id/tvCharCharismaModifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharCharismaModifier"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharCharisma"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityModifier"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityModifier"
+            app:layout_constraintTop_toTopOf="@+id/tvCharCharisma" />
+
+        <TextView
+            android:id="@+id/tvCharCharismaST"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharCharismaST"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharCharisma"
+            app:layout_constraintEnd_toEndOf="@+id/tvAbilityST"
+            app:layout_constraintStart_toStartOf="@+id/tvAbilityST"
+            app:layout_constraintTop_toTopOf="@+id/tvCharCharisma" />
+
+        <TextView
+            android:id="@+id/tvSkillList"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="615dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:paddingStart="25dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="25dp"
+            android:text="@string/tvSkillList"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAbilityList" />
+
+        <TextView
+            android:id="@+id/tvSkillScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="137dp"
+            android:layout_marginLeft="137dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/tvSkillScore"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toTopOf="@+id/tvSkillList" />
+
+        <TextView
+            android:id="@+id/tvSkillProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/tvSkillProficiency"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvSkillScore" />
+
+        <TextView
+            android:id="@+id/tvSkillAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/tvSkillAbility"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvSkillList" />
+
+        <TextView
+            android:id="@+id/tvCharAcrobatics"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharAcrobatics"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toTopOf="@+id/tvSkillList" />
+
+        <TextView
+            android:id="@+id/tvCharAcrobaticsScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharAcrobaticsScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAcrobatics"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAcrobatics" />
+
+
+        <ImageView
+            android:id="@+id/ivCharAcrobaticsProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAcrobatics"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAcrobatics"/>
+
+        <TextView
+            android:id="@+id/tvCharAcrobaticsAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharAcrobaticsAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAcrobatics"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAcrobatics" />
+
+        <TextView
+            android:id="@+id/tvCharAnimalHandling"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharAnimalHandling"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharAcrobatics" />
+
+        <TextView
+            android:id="@+id/tvCharAnimalHandlingScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharAnimalHandlingScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAnimalHandling"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAnimalHandling" />
+
+        <ImageView
+            android:id="@+id/ivCharAnimalHandlingProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAnimalHandling"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAnimalHandling" />
+
+        <TextView
+            android:id="@+id/tvCharAnimalHandlingAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharAnimalHandlingAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAnimalHandling"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAnimalHandling" />
+
+        <TextView
+            android:id="@+id/tvCharArcana"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharArcana"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharAnimalHandling" />
+
+        <TextView
+            android:id="@+id/tvCharArcanaScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharArcanaScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharArcana"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharArcana" />
+
+        <ImageView
+            android:id="@+id/ivCharArcanaProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharArcana"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharArcana"/>
+
+        <TextView
+            android:id="@+id/tvCharArcanaAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharArcanaAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharArcana"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharArcana" />
+
+        <TextView
+            android:id="@+id/tvCharAthletics"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharAthletics"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharArcana" />
+
+        <TextView
+            android:id="@+id/tvCharAthleticsScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharAthleticsScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAthletics"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAthletics" />
+
+        <ImageView
+            android:id="@+id/ivCharAthleticsProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAthletics"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAthletics"/>
+
+        <TextView
+            android:id="@+id/tvCharAthleticsAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharAthleticsAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharAthletics"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharAthletics" />
+
+        <TextView
+            android:id="@+id/tvCharDeception"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharDeception"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharAthletics" />
+
+        <TextView
+            android:id="@+id/tvCharDeceptionScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharDeceptionScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharDeception"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharDeception" />
+
+        <ImageView
+            android:id="@+id/ivCharDeceptionProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharDeception"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharDeception" />
+
+        <TextView
+            android:id="@+id/tvCharDeceptionAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharDeceptionAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharDeception"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharDeception" />
+
+        <TextView
+            android:id="@+id/tvCharHistory"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharHistory"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharDeception" />
+
+        <TextView
+            android:id="@+id/tvCharHistoryScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharHistoryScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharHistory"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharHistory" />
+
+        <ImageView
+            android:id="@+id/ivCharHistoryProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharHistory"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharHistory" />
+
+        <TextView
+            android:id="@+id/tvCharHistoryAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharHistoryAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharHistory"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharHistory" />
+
+        <TextView
+            android:id="@+id/tvCharInsight"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharInsight"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharHistory" />
+
+        <TextView
+            android:id="@+id/tvCharInsightScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharInsightScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharInsight"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharInsight" />
+
+        <ImageView
+            android:id="@+id/ivCharInsightProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharInsight"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharInsight" />
+
+        <TextView
+            android:id="@+id/tvCharInsightAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharInsightAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharInsight"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharInsight" />
+
+        <TextView
+            android:id="@+id/tvCharIntimidation"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharIntimidation"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharInsight" />
+
+        <TextView
+            android:id="@+id/tvCharIntimidationScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharIntimidationScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharIntimidation"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharIntimidation" />
+
+        <ImageView
+            android:id="@+id/ivCharIntimidationProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharIntimidation"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharIntimidation" />
+
+        <TextView
+            android:id="@+id/tvCharIntimidationAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharIntimidationAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharIntimidation"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharIntimidation" />
+
+        <TextView
+            android:id="@+id/tvCharInvestigation"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharInvestigation"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharIntimidation" />
+
+        <TextView
+            android:id="@+id/tvCharInvestigationScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharInvestigationScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharInvestigation"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharInvestigation" />
+
+        <ImageView
+            android:id="@+id/ivCharInvestigationProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharInvestigation"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharInvestigation" />
+
+        <TextView
+            android:id="@+id/tvCharInvestigationAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharInvestigationAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharInvestigation"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharInvestigation" />
+
+        <TextView
+            android:id="@+id/tvCharMedicine"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharMedicine"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharInvestigation" />
+
+        <TextView
+            android:id="@+id/tvCharMedicineScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharMedicineScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharMedicine"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharMedicine" />
+
+        <ImageView
+            android:id="@+id/ivCharMedicineProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharMedicine"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharMedicine" />
+
+        <TextView
+            android:id="@+id/tvCharMedicineAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharMedicineAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharMedicine"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharMedicine" />
+
+        <TextView
+            android:id="@+id/tvCharNature"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharNature"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharMedicine" />
+
+        <TextView
+            android:id="@+id/tvCharNatureScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharNatureScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharNature"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharNature" />
+
+        <ImageView
+            android:id="@+id/ivCharNatureProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharNature"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharNature" />
+
+        <TextView
+            android:id="@+id/tvCharNatureAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharNatureAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharNature"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharNature" />
+
+        <TextView
+            android:id="@+id/tvCharPerception"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharPerception"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharNature" />
+
+        <TextView
+            android:id="@+id/tvCharPerceptionScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharPerceptionScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPerception"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPerception" />
+
+        <ImageView
+            android:id="@+id/ivCharPerceptionProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPerception"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPerception" />
+
+        <TextView
+            android:id="@+id/tvCharPerceptionAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharPerceptionAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPerception"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPerception" />
+
+        <TextView
+            android:id="@+id/tvCharPerformance"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharPerformance"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharPerception" />
+
+        <TextView
+            android:id="@+id/tvCharPerformanceScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharPerformanceScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPerformance"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPerformance" />
+
+        <ImageView
+            android:id="@+id/ivCharPerformanceProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPerformance"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPerformance" />
+
+        <TextView
+            android:id="@+id/tvCharPerformanceAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharPerformanceAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPerformance"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPerformance" />
+
+        <TextView
+            android:id="@+id/tvCharPersuasion"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharPersuasion"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharPerformance" />
+
+        <TextView
+            android:id="@+id/tvCharPersuasionScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharPersuasionScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPersuasion"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPersuasion" />
+
+        <ImageView
+            android:id="@+id/ivCharPersuasionProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPersuasion"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPersuasion" />
+
+        <TextView
+            android:id="@+id/tvCharPersuasionAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharPersuasionAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharPersuasion"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharPersuasion" />
+
+        <TextView
+            android:id="@+id/tvCharReligion"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharReligion"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharPersuasion" />
+
+        <TextView
+            android:id="@+id/tvCharReligionScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharReligionScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharReligion"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharReligion" />
+
+        <ImageView
+            android:id="@+id/ivCharReligionProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharReligion"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharReligion" />
+
+        <TextView
+            android:id="@+id/tvCharReligionAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharReligionAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharReligion"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharReligion" />
+
+        <TextView
+            android:id="@+id/tvCharSleightOfHand"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharSleightOfHand"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharReligion" />
+
+        <TextView
+            android:id="@+id/tvCharSleightOfHandScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharSleightOfHandScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharSleightOfHand"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharSleightOfHand" />
+
+        <ImageView
+            android:id="@+id/ivCharSleightOfHandProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharSleightOfHand"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharSleightOfHand" />
+
+        <TextView
+            android:id="@+id/tvCharSleightOfHandAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharSleightOfHandAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharSleightOfHand"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharSleightOfHand" />
+
+        <TextView
+            android:id="@+id/tvCharStealth"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharStealth"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharSleightOfHand" />
+
+        <TextView
+            android:id="@+id/tvCharStealthScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharStealthScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharStealth"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharStealth" />
+
+        <ImageView
+            android:id="@+id/ivCharStealthProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharStealth"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharStealth" />
+
+        <TextView
+            android:id="@+id/tvCharStealthAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharStealthAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharStealth"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharStealth" />
+
+        <TextView
+            android:id="@+id/tvCharSurvival"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingLeft="15dp"
+            android:paddingEnd="15dp"
+            android:text="@string/tvCharSurvival"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillList"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillList"
+            app:layout_constraintTop_toBottomOf="@+id/tvCharStealth" />
+
+        <TextView
+            android:id="@+id/tvCharSurvivalScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharSurvivalScore"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharSurvival"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillScore"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillScore"
+            app:layout_constraintTop_toTopOf="@+id/tvCharSurvival" />
+
+        <ImageView
+            android:id="@+id/ivCharSurvivalProficiency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_check_box_outline_blank_24"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharSurvival"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillProficiency"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillProficiency"
+            app:layout_constraintTop_toTopOf="@+id/tvCharSurvival" />
+
+        <TextView
+            android:id="@+id/tvCharSurvivalAbility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvCharSurvivalAbility"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCharSurvival"
+            app:layout_constraintEnd_toEndOf="@+id/tvSkillAbility"
+            app:layout_constraintStart_toStartOf="@+id/tvSkillAbility"
+            app:layout_constraintTop_toTopOf="@+id/tvCharSurvival" />
+
+        <TextView
+            android:id="@+id/tvPw"
+            style="@style/character_basic_info"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/tvPw"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSkillList" />
+
+        <TextView
+            android:id="@+id/tvPwScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="288dp"
+            android:layout_marginLeft="288dp"
+            android:text="@string/tvPwScore"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPw"
+            app:layout_constraintStart_toStartOf="@+id/tvPw"
+            app:layout_constraintTop_toTopOf="@+id/tvPw" />
+
+        <Button
+            android:id="@+id/btEditCharacter"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btEditCharacter"
+            app:backgroundTint="#3F51B5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPw" />
+
+        <Button
+            android:id="@+id/btNavNotes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/btNavNotesItemsSpells"
+            app:backgroundTint="#3F51B5"
+            app:iconTint="#3F51B5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

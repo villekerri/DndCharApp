@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:background">@android:color/holo_orange_light</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+
+    <style name="character_basic_info">
+        <item name="android:background">@drawable/rounded_corner</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="character_list">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:background">@drawable/rounded_corner</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+    </style>
+</resources>

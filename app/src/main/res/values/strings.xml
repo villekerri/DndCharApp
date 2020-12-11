@@ -1,0 +1,203 @@
+<resources>
+    <string name="app_name">DndCharApp</string>
+    <string name="hint_word">Name</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Character not saved, missing values</string>
+    <string name="character_not_edited">Character was not edited</string>
+    <string name="tvCharName">Name</string>
+    <string name="tvCharClass">Class</string>
+    <string name="tvCharRace">Race</string>
+    <string name="tvCharAlig">Alignment</string>
+    <string name="tvCharLvl">"Level: "</string>
+    <string name="tvCharXp">"EXP: "</string>
+    <string name="tvCharHp">"HP: "</string>
+    <string name="tvCharAc">"AC: "</string>
+    <string name="tvCharBackground">Background</string>
+    <string name="tvCharSpeed">"Speed: "</string>
+    <string name="tvCharHitDice">"Hit dice: "</string>
+    <string name="tvCharHitDiceScore">0</string>
+    <string name="tvCharProficiency">"Proficiency: "</string>
+    <string name="tvCharProficiencyScore">0</string>
+    <string name="hint_race">Race</string>
+    <string name="hint_alignment">Alignment</string>
+    <string name="hint_background">Background</string>
+    <string name="hint_speed">Speed</string>
+    <string name="hint_level">Level</string>
+    <string name="hint_xp">Experience</string>
+    <string name="tvAddStrength">Strength:</string>
+    <string name="tvAddDexterity">Dexterity:</string>
+    <string name="tvAddConstitution">Constitution:</string>
+    <string name="tvAddIntelligence">Intelligence:</string>
+    <string name="tvAddWisdom">Wisdom:</string>
+    <string name="tvAddCharisma">Charisma:</string>
+    <string name="tvProficiencies">Choose proficiencies:</string>
+    <string name="addCbAcrobatics">Acrobatics (Dexterity)</string>
+    <string name="addCbAnimalHandling">Animal Handling (Wisdom)</string>
+    <string name="addCbArcana">Arcana (Intelligence)</string>
+    <string name="addCbAthletics">Athletics (Strength)</string>
+    <string name="addCbDeception">Deception (Charisma)</string>
+    <string name="addCbHistory">History (Intelligence)</string>
+    <string name="addCbInsight">Insight (Wisdom)</string>
+    <string name="addCbIntimidation">Intimidation (Charisma)</string>
+    <string name="addCbInvestigation">Investigation (Intelligence)</string>
+    <string name="addCbMedicine">Medicine (Wisdom)</string>
+    <string name="addCbNature">Nature (Intelligence)</string>
+    <string name="addCbPerception">Perception (Wisdom)</string>
+    <string name="addCbPerformance">Performance (Charisma)</string>
+    <string name="addCbPersuasion">Persuasion (Charisma)</string>
+    <string name="addCbReligion">Religion (Intelligence)</string>
+    <string name="addCbSleightOfHand">Sleight of Hand (Dexterity)</string>
+    <string name="addCbStealth">Stealth (Dexterity)</string>
+    <string name="addCbSurvival">Survival (Wisdom)</string>
+    <string name="btChangeSome">Save Level/EXP/HP/AC</string>
+    <string name="tvCharStrength">Strength:</string>
+    <string name="tvCharDexterity">Dexterity:</string>
+    <string name="tvCharConstitution">Constitution:</string>
+    <string name="tvCharIntelligence">Intelligence:</string>
+    <string name="tvCharWisdom">Wisdom:</string>
+    <string name="tvCharCharisma">Charisma:</string>
+    <string name="tvAbilityList">Ability</string>
+    <string name="tvAbilityScore">Score</string>
+    <string name="tvAbilityModifier">Modifier</string>
+    <string name="tvAbilityST">Saving throw</string>
+    <string name="tvCharStrengthScore">0</string>
+    <string name="tvCharStrengthModifier">0</string>
+    <string name="tvCharStrengthST">0</string>
+    <string name="tvCharDexterityScore">0</string>
+    <string name="tvCharDexterityModifier">0</string>
+    <string name="tvCharDexterityST">0</string>
+    <string name="tvCharConstitutionScore">0</string>
+    <string name="tvCharConstitutionModifier">0</string>
+    <string name="tvCharConstitutionST">0</string>
+    <string name="tvCharIntelligenceScore">0</string>
+    <string name="tvCharIntelligenceModifier">0</string>
+    <string name="tvCharIntelligenceST">0</string>
+    <string name="tvCharWisdomScore">0</string>
+    <string name="tvCharWisdomModifier">0</string>
+    <string name="tvCharWisdomST">0</string>
+    <string name="tvCharCharismaScore">0</string>
+    <string name="tvCharCharismaModifier">0</string>
+    <string name="tvCharCharismaST">0</string>
+    <string name="tvSkillList">Skill</string>
+    <string name="tvSkillScore">Score</string>
+    <string name="tvSkillProficiency">Proficiency</string>
+    <string name="tvSkillAbility">Ability</string>
+    <string name="tvCharAcrobatics">Acrobatics:</string>
+    <string name="tvCharAnimalHandling">Animal Handling:</string>
+    <string name="tvCharArcana">Arcana:</string>
+    <string name="tvCharAthletics">Athletics:</string>
+    <string name="tvCharDeception">Deception:</string>
+    <string name="tvCharHistory">History:</string>
+    <string name="tvCharInsight">Insight:</string>
+    <string name="tvCharIntimidation">Intimidation:</string>
+    <string name="tvCharInvestigation">Investigation:</string>
+    <string name="tvCharMedicine">Medicine:</string>
+    <string name="tvCharNature">Nature:</string>
+    <string name="tvCharPerception">Perception:</string>
+    <string name="tvCharPerformance">Performance:</string>
+    <string name="tvCharPersuasion">Persuasion:</string>
+    <string name="tvCharReligion">Religion:</string>
+    <string name="tvCharSleightOfHand">Sleight of Hand:</string>
+    <string name="tvCharStealth">Stealth:</string>
+    <string name="tvCharSurvival">Survival:</string>
+    <string name="tvCharAcrobaticsScore">0</string>
+    <string name="tvCharAcrobaticsAbility">Dex</string>
+    <string name="tvCharAnimalHandlingScore">0</string>
+    <string name="tvCharAnimalHandlingAbility">Wis</string>
+    <string name="tvCharArcanaScore">0</string>
+    <string name="tvCharArcanaAbility">Int</string>
+    <string name="tvCharAthleticsScore">0</string>
+    <string name="tvCharAthleticsAbility">Str</string>
+    <string name="tvCharDeceptionScore">0</string>
+    <string name="tvCharDeceptionAbility">Cha</string>
+    <string name="tvCharHistoryScore">0</string>
+    <string name="tvCharHistoryAbility">Int</string>
+    <string name="tvCharInsightScore">0</string>
+    <string name="tvCharInsightAbility">Wis</string>
+    <string name="tvCharIntimidationScore">0</string>
+    <string name="tvCharIntimidationAbility">Cha</string>
+    <string name="tvCharInvestigationScore">0</string>
+    <string name="tvCharInvestigationAbility">Int</string>
+    <string name="tvCharMedicineScore">0</string>
+    <string name="tvCharMedicineAbility">Wis</string>
+    <string name="tvCharNatureScore">0</string>
+    <string name="tvCharNatureAbility">Int</string>
+    <string name="tvCharPerceptionScore">0</string>
+    <string name="tvCharPerceptionAbility">Wis</string>
+    <string name="tvCharPerformanceScore">0</string>
+    <string name="tvCharPerformanceAbility">Cha</string>
+    <string name="tvCharPersuasionScore">0</string>
+    <string name="tvCharPersuasionAbility">Cha</string>
+    <string name="tvCharReligionScore">0</string>
+    <string name="tvCharReligionAbility">Int</string>
+    <string name="tvCharSleightOfHandScore">0</string>
+    <string name="tvCharSleightOfHandAbility">Dex</string>
+    <string name="tvCharStealthScore">0</string>
+    <string name="tvCharStealthAbility">Dex</string>
+    <string name="tvCharSurvivalScore">0</string>
+    <string name="tvCharSurvivalAbility">Wis</string>
+    <string name="btEditCharacter">EDIT CHARACTER</string>
+    <string name="tvPw">Passive wisdom (perception):</string>
+    <string name="tvPwScore">0</string>
+    <string name="tvCharLvlScore">0</string>
+    <string name="tvCharXpScore">0</string>
+    <string name="tvCharHpScore">0</string>
+    <string name="tvCharAcScore">0</string>
+    <string name="tvCharSpeedScore">0</string>
+    <string name="hint_hp">HP</string>
+    <string name="hint_ac">AC</string>
+    <string name="tvNotesOwnerName">None</string>
+
+
+    <string-array name="classes">
+        <item>Artificer</item>
+        <item>Barbarian</item>
+        <item>Bard</item>
+        <item>Cleric</item>
+        <item>Druid</item>
+        <item>Fighter</item>
+        <item>Monk</item>
+        <item>Paladin</item>
+        <item>Ranger</item>
+        <item>Rogue</item>
+        <item>Sorcerer</item>
+        <item>Warlock</item>
+        <item>Wizard</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btAddNote">Add Note</string>
+    <string name="tvAddNote">Add note</string>
+    <string name="btSaveNote">Save new note</string>
+    <string name="btNavNotesItemsSpells">Notes / Items / Spells</string>
+    <string name="btNavItems">Items</string>
+    <string name="btNavSpells">Spells</string>
+    <string name="btAddItem">Add Item</string>
+    <string name="btAddSpell">Add Spell</string>
+    <string name="btBackToAllNotes">Back to notes</string>
+    <string name="tvNewNoteTitle">Title</string>
+    <string name="hint_new_note_title">Title of the new note</string>
+    <string name="tvNewNoteText">Text</string>
+    <string name="hint_new_note_text">Content of the note</string>
+    <string name="hint_edit_note_name">Title of the note</string>
+    <string name="btSaveEditedNote">Save edited note</string>
+    <string name="btBackToAllItems">Back to items</string>
+    <string name="btSaveNewItem">Save new item</string>
+    <string name="tvNewItemName">Item name</string>
+    <string name="hint_new_item_name">Name of the item</string>
+    <string name="tvNewItemNote">Item description</string>
+    <string name="hint_new_item_note">Description of the new item</string>
+    <string name="btBackToAllSpells">Back to spells</string>
+    <string name="tvSpellName">Spell name</string>
+    <string name="hint_new_spell_name">Name of the new spell</string>
+    <string name="tvSpellLvl">Spell level</string>
+    <string name="tvSpellNote">Spell description</string>
+    <string name="hint_new_spell_description">Description of the spell</string>
+    <string name="btSaveSpell">Save new spell</string>
+    <string name="hint_edit_item_note">Description of the item</string>
+    <string name="btSaveEditedItem">Save edited item</string>
+    <string name="hint_edit_spell_name">Name of the spell</string>
+    <string name="btSaveEditedSpell">Save edited spell</string>
+    <string name="hint_new_spell_level">0 – 9</string>
+    <string name="btNavNotes">Notes</string>
+</resources>

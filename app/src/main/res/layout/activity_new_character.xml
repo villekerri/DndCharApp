@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_linen">
+
+        <EditText
+            android:id="@+id/addCharName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_word"
+            android:layout_margin="@dimen/big_padding"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/addCharRace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_race"
+            android:minHeight="@dimen/min_height"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/addCharSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_speed"
+            android:inputType="number"
+            android:minHeight="@dimen/min_height"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/addCharAligment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_alignment"
+            android:minHeight="@dimen/min_height"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/addCharBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_background"
+            android:minHeight="@dimen/min_height"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/addCharClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            android:fontFamily="sans-serif-black"
+            android:minHeight="@dimen/min_height"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/addCharLevel"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/hint_level"
+                android:inputType="number"
+                android:minHeight="@dimen/min_height"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/addCharXp"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/hint_xp"
+                android:inputType="number"
+                android:minHeight="@dimen/min_height"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAddStrength"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="31dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/tvAddStrength"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addCharStrength"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:fontFamily="sans-serif-light"
+                android:inputType="number"
+                android:minHeight="@dimen/min_height"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAddDexterity"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="31dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/tvAddDexterity"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addCharDexterity"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:fontFamily="sans-serif-light"
+                android:inputType="number"
+                android:minHeight="@dimen/min_height"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAddConstitution"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="31dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/tvAddConstitution"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addCharConstitution"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:fontFamily="sans-serif-light"
+                android:inputType="number"
+                android:minHeight="@dimen/min_height"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAddIntelligence"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="31dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/tvAddIntelligence"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addCharIntelligence"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:fontFamily="sans-serif-light"
+                android:inputType="number"
+                android:minHeight="@dimen/min_height"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAddWisdom"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="31dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/tvAddWisdom"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addCharWisdom"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:fontFamily="sans-serif-light"
+                android:inputType="number"
+                android:minHeight="@dimen/min_height"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAddCharisma"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="31dp"
+                android:layout_marginLeft="31dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:minHeight="@dimen/min_height"
+                android:text="@string/tvAddCharisma"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addCharCharisma"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/big_padding"
+                android:fontFamily="sans-serif-light"
+                android:inputType="number"
+                android:minHeight="@dimen/min_height"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvProficiencies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-light"
+            android:minHeight="30dp"
+            android:text="@string/tvProficiencies"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cbAcrobatics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbAcrobatics"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbAnimalHandling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbAnimalHandling"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbArcana"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbArcana"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbAthletics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbAthletics"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbDeception"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbDeception"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbHistory"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbInsight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbInsight"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbIntimidation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbIntimidation"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbInvestigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbInvestigation"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbMedicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbMedicine"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbNature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbNature"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbPerception"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbPerception"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbPerformance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbPerformance"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbPersuasion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbPersuasion"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbReligion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbReligion"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbSlightOfHand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbSleightOfHand"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbStealth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:text="@string/addCbStealth"
+            android:textSize="18sp" />
+
+        <CheckBox
+            android:id="@+id/cbSurvival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/addCbSurvival"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/big_padding"
+            android:background="@color/colorPrimary"
+            android:text="@string/button_save"
+            android:textColor="@color/buttonLabel"
+            app:backgroundTint="#3F51B5" />
+
+    </LinearLayout>
+</ScrollView>
